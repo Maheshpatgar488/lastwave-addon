@@ -5,6 +5,10 @@ export default function handler(req, res) {
     return res.status(400).json({ error: 'Missing track ID or query parameter' });
   }
 
-  // Your stream extraction/forwarding logic goes here
-  return res.status(200).json({ success: true, message: 'Vercel proxy route active' });
+  // Add your stream extraction/forwarding logic here
+  return res.status(200).json({ 
+    success: true, 
+    message: 'Vercel proxy route active',
+    trackId: id 
+  });
 }
